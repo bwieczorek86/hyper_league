@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% for team in teams %}
+    <div>
+        <h2><a href="">{{ team.team_name }}</a></h2>
+        <p>{{ team.player_one }}</p>
+        <p>{{ team.player_two }}</p>
+    </div>
+{% endfor %}
+
+</body>
+</html>

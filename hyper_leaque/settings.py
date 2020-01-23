@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hyper_leaque_backend'
+    'hyper_leaque_backend',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -120,3 +121,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+
+# Bootstrap module
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
