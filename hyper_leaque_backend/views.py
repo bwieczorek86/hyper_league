@@ -9,9 +9,9 @@ def index(request):
     return render(request, 'teams_list.html', {'teams': teams})
 
 
-def details(request):
-    team = Team.objects.name('Backendy').get('name')
-    return HttpResponse("Test")
+def team_details(request, team_id):
+    team = Team.objects.get(pk=team_id)
+    return render(request, 'team_details.html', {'team': team})
 
 
 
