@@ -32,5 +32,5 @@ def create_balanced_round_robin(players):
 
 # teams_to_round = Team.object.all()
 # # schedule = create_balanced_round_robin(teams_to_round)
-# # output = ("\n".join(['{} vs. {}'.format(m[0]['team_name'], m[1]) for round_team in schedule for m in teams_to_round]))
+# # output = ("\n".join(['{} vs. {}'.format(m[0], m[1]) for round_team in schedule for m in teams_to_round]))
 # # return output

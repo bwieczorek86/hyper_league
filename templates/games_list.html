@@ -9,12 +9,14 @@
                 </tr>
             </thead>
             {% for game in games %}
-                <tbody>
-                    <tr>
-{#                      <th scope="row">{{ team.id }}</th>#}
-                      <td>{{ game }}</td>
-                    </tr>
-                </tbody>
+                {% for g in game %}
+                    <tbody>
+                        <tr>
+    {#                      <th scope="row">{{ team.id }}</th>#}
+                          <td>{{ g }}</td>
+                        </tr>
+                    </tbody>
+                {% endfor %}
             {% endfor %}
         </table>
     </div>

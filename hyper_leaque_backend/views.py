@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-from hyper_leaque_backend.helpers.create_match_schedule import create_balanced_round_robin
 from hyper_leaque_backend.models import Team
+from hyper_leaque_backend.outer_api.create_games_list import add_data_to_db
 
 
 def index(request):
@@ -15,9 +15,8 @@ def team_details(request, team_id):
 
 
 def games_list(request):
-    teams = Team.objects.all()
-    games = create_balanced_round_robin(teams)
-    return render(request, 'games_list.html', {'games': games})
+    games_schedule = add_data_to_db()
+    return render(request, 'games_list.html', {'games': games_schedule})
 
 
 
