@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+    <h3 align="center">Tabela</h3>
+        <table class="table table-striped" title="Lista zespołów">
+            <thead>
+                <tr>
+                  <th scope="col">Lp</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Player 1</th>
+                  <th scope="col">Player 2</th>
+                </tr>
+            </thead>
+            {% for team in teams %}
+                <tbody>
+                    <tr>
+                      <th scope="row">{{ team.id }}</th>
+                      <td>{{ team.team_name }}</td>
+                      <td>{{ team.player_one }}</td>
+                      <td>{{ team.player_two }}</td>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

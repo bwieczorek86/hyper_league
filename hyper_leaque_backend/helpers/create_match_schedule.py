@@ -1,6 +1,3 @@
-from hyper_leaque_backend.models import Team
-
-
 def create_balanced_round_robin(players):
     """ Create a schedule for the teams in the list and return it"""
     s = []

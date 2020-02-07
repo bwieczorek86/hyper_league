@@ -2,21 +2,23 @@
 
 {% block content %}
     <div>
+    <h3 align="center">Terminarz</h3>
         <table class="table table-striped" title="Terminarz">
             <thead>
                 <tr>
-                  <th scope="col">Terminarz</th>
+                    <th scope="col">Home Team</th>
+                    <th scope="col">Scores</th>
+                    <th scope="col">Away Team</th>
                 </tr>
             </thead>
-            {% for game in games %}
-                {% for g in game %}
-                    <tbody>
-                        <tr>
-    {#                      <th scope="row">{{ team.id }}</th>#}
-                          <td>{{ g }}</td>
-                        </tr>
-                    </tbody>
-                {% endfor %}
+            {% for game in games_schedule %}
+                <tbody>
+                    <tr>
+                        <td>{{ game.home_team__team_name }}</td>
+                        <td>{{ game.home_team_score }} - {{ game.away_team_score }}</td>
+                        <td>{{ game.away_team__team_name }}</td>
+                    </tr>
+                </tbody>
             {% endfor %}
         </table>
     </div>

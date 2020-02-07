@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from hyper_leaque_backend.models import Team, Games
+from hyper_leaque_backend.models import Team, Game
 
 
 class TeamModelTest(TestCase):
@@ -18,12 +18,12 @@ class GamesModelTest(TestCase):
         team1.save()
         team2 = Team(player_one='Dawid', player_two='Rogal')
         team2.save()
-        game1 = Games(home_team_id=team1.id,
-                      away_team_id=team2.id,
-                      game_date='2020-01-01',
-                      home_team_score=3,
-                      away_team_score=4,
-                      winner=None)
+        game1 = Game(home_team_id=team1.id,
+                     away_team_id=team2.id,
+                     game_date='2020-01-01',
+                     home_team_score=3,
+                     away_team_score=4,
+                     winner=None)
 
         self.assertEqual(1, game1.home_team_id)
         self.assertEqual(2, game1.away_team_id)
