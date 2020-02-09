@@ -26,7 +26,6 @@ def create_balanced_round_robin(players):
         map_teams = map_teams[mid:-1] + map_teams[:mid] + map_teams[-1:]
     return s
 
-
 # teams_to_round = Team.object.all()
 # # schedule = create_balanced_round_robin(teams_to_round)
 # # output = ("\n".join(['{} vs. {}'.format(m[0], m[1]) for round_team in schedule for m in teams_to_round]))
