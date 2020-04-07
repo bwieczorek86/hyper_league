@@ -7,8 +7,8 @@ class Team(models.Model):
     team_name = models.CharField(max_length=255)
     created_date = models.DateTimeField(auto_now_add=True)
 
-    # def __str__(self):
-    #     return 'Team: {}'.format(self.team_name)
+    def __str__(self):
+        return 'Team: {}'.format(self.team_name)
 
 
 class Game(models.Model):
@@ -19,5 +19,5 @@ class Game(models.Model):
     away_team_score = models.IntegerField(default=0)
     winner = models.CharField(max_length=255, default=None, blank=True, null=True)
 
-    # def __str__(self):
-    #     return 'Game: {}-{}'.format(self.home_team, self.away_team)
+    def __str__(self):
+        return 'Game: {}-{}'.format(self.home_team.team_name, self.away_team.team_name)

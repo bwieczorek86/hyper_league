@@ -4,8 +4,9 @@
     <div>
     <h3 align="center">Terminarz</h3>
         <table class="table table-striped" title="Terminarz">
-            <thead>
+            <thead class="thead-dark">
                 <tr>
+                    <th> Check</th>
                     <th scope="col">Home Team</th>
                     <th scope="col">Scores</th>
                     <th scope="col">Away Team</th>
@@ -14,6 +15,12 @@
             {% for game in games_schedule %}
                 <tbody>
                     <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1"></label>
+                            </div>
+                        </td>
                         <td>{{ game.home_team__team_name }}</td>
                         <td>{{ game.home_team_score }} - {{ game.away_team_score }}</td>
                         <td>{{ game.away_team__team_name }}</td>
